@@ -1,0 +1,31 @@
+
+
+@mixin flex($spacing : none,$direction : row){
+  display:flex;
+  @if $direction == column{
+    flex-direction: column;
+  }
+  @if $spacing == between{
+    justify-content: space-between;
+  }
+  @else if $spacing == around{
+    justify-content: space-around;
+  }
+  @else if $spacing == center{
+    justify-content:center;
+  }
+  align-items:center;
+}
+
+@mixin size($height,$width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin square($size){
+  width:$size;
+  height:$size;
+}
+
+
+
