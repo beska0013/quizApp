@@ -1,0 +1,64 @@
+@import '../../../../src/assets/styles/linkin.scss';
+
+main {
+  position: relative;
+  @include flex(center);
+  height: 100vh;
+  button {
+    position: absolute;
+    z-index: 1;
+    font-size: 46px;
+    font-family: "Righteouse", sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 1em;
+    background-color: transparent;
+    transition: transform .3s ease-in-out;
+    &:active {
+      transform: scale(.9);
+      transition: transform .3s ease-in-out;
+    }
+    .let{
+      transition: transform .3s ease-in-out,opacity .3s ease-in-out;
+    }
+  }
+  .quizStart {
+    position: relative;
+    @include square(100vw);
+    max-height: 500px;
+    max-width: 500px;
+    @include flex(around);
+    transform: translate(0, -100vh) rotate(-2deg);
+    flex-wrap: wrap;
+    animation: squareDrop 1s ease-in-out forwards;
+
+    .square1 {
+      @include square(48%);
+      background-color: #ff0032;
+      border-top-left-radius: 8vw;
+      transition: transform .3s ease-in-out,opacity .3s ease-in-out ;
+    }
+
+    .square2 {
+      @include square(48%);
+      background-color: #3cff00;
+      border-top-right-radius: 8vw;
+      transition: transform .3s ease-in-out,opacity .3s ease-in-out ;
+    }
+
+    .square3 {
+      @include square(48%);
+      background-color: #929014;
+      border-bottom-left-radius: 8vw;
+      transition: transform .3s ease-in-out,opacity .3s ease-in-out ;
+    }
+    .square4 {
+      @include square(48%);
+      background-color: #048699;
+      border-bottom-right-radius: 8vw;
+      transition: transform .3s ease-in-out,opacity .3s ease-in-out ;
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+@import '../../../src/assets/styles/linkin.scss';
+
+
+
+
+section{
+  @include square(100%);
+  transition: opacity .6s ease-in-out;
+  form{
+    @include flex(between);
+    @include size(80vh,100%);
+    max-height: 33rem;
+    max-width: 25rem;
+    flex-flow: column;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+label {
+  opacity: 0;
+  width:100%;
+  flex-flow: column;
+  font-family: "Righteouse", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  transition:opacity .3s ease-in-out;
+  animation: fadein 1s ease-in-out forwards .3s;
+  select{
+    @include size(60px,100%);
+    margin: 1rem 0;
+    font-size: 8vw;
+
+    option{
+      font-size: 8px;
+      color: #000000;
+      text-align: start;
+      white-space:normal;
+    }
+  }
+   }
+
+ }
+}
+@media screen and(min-width: 575px){
+  section{
+    form{
+      label {
+        select{
+          font-size:40px;
+          option{
+            font-size: 16px;
+          }
+        }
+      }
+
+    }
+  }
+}

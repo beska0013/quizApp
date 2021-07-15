@@ -1,0 +1,101 @@
+@import '../../../../src/assets/styles/linkin.scss';
+section {
+    padding: 1rem;
+    font-family:"Segoe UI",sans-serif;
+    opacity: 0;
+    animation: fadein 1s ease-in-out forwards .3s;
+  .questions {
+    @include flex(center);
+    flex-flow: column;
+    width: 100%;
+    max-width: 25rem;
+    header {
+      position: fixed;
+      top: 0;
+      padding: 1rem;
+      width: 100%;
+      h2 {
+        text-align: center;
+        font-size: 8vw;
+      }
+    }
+
+    main {
+      width: 100%;
+      ul {
+        @include flex(between);
+        margin: 2rem 0;
+        flex-flow: column;
+        font-size: 8vw;
+        .answer {
+          cursor: pointer;
+          @include flex(center);
+          text-align: center;
+          @include size(70px, 100%);
+          border: 2px solid #48b3a6;
+          border-radius: 10px;
+          transition: background-color .3s ease-in-out;
+          &:hover {
+            background-color: #48b3a6;
+            transition: background-color .3s ease-in-out;
+          }
+        }
+      }
+
+    }
+
+    footer {
+      @include flex(center);
+      flex-flow: column;
+      position: fixed;
+      bottom: 0;
+      padding: 1rem;
+      width: 100%;
+      button {
+        max-width: 25rem;
+        font-size: 8vw;
+      }
+
+      p {
+        text-align: center;
+        color: #ff0032;
+      }
+    }
+  }
+}
+@media screen and(min-width: 575px){
+
+  section {
+    .questions {
+      header {
+        h2 {
+          font-size: 40px;
+        }
+      }
+
+      main {
+
+        ul {
+          font-size: 24px;
+          .answer {
+
+          }
+        }
+
+      }
+
+      footer {
+
+        button {
+          font-size: 24px;
+        }
+
+        p {
+
+        }
+      }
+    }
+  }
+
+
+}

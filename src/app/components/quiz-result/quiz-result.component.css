@@ -1,0 +1,57 @@
+@keyframes squareDrop {
+  50% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  75% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Righteouse";
+  src: url("../fonts/Righteous-Regular.ttf");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI.ttf");
+}
+section {
+  opacity: 0;
+  flex-flow: column;
+  font-family: "Segoe UI", sans-serif;
+  padding: 1rem;
+  animation: fadein 1s ease-in-out forwards;
+}
+section h2, section h3 {
+  font-size: 32px;
+  text-align: center;
+  margin: 1em 0;
+}
+section h3 span {
+  position: relative;
+  color: #f3ff00;
+  cursor: pointer;
+}
+section h3 span::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: #f3ff00;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+section h3 span:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=quiz-result.component.css.map */

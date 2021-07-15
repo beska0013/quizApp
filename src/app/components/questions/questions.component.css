@@ -1,0 +1,107 @@
+@keyframes squareDrop {
+  50% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  75% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Righteouse";
+  src: url("../fonts/Righteous-Regular.ttf");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI.ttf");
+}
+section {
+  padding: 1rem;
+  font-family: "Segoe UI", sans-serif;
+  opacity: 0;
+  animation: fadein 1s ease-in-out forwards 0.3s;
+}
+section .questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  max-width: 25rem;
+}
+section .questions header {
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  width: 100%;
+}
+section .questions header h2 {
+  text-align: center;
+  font-size: 8vw;
+}
+section .questions main {
+  width: 100%;
+}
+section .questions main ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  flex-flow: column;
+  font-size: 8vw;
+}
+section .questions main ul .answer {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  border: 2px solid #48b3a6;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+section .questions main ul .answer:hover {
+  background-color: #48b3a6;
+  transition: background-color 0.3s ease-in-out;
+}
+section .questions footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+}
+section .questions footer button {
+  max-width: 25rem;
+  font-size: 8vw;
+}
+section .questions footer p {
+  text-align: center;
+  color: #ff0032;
+}
+
+@media screen and (min-width: 575px) {
+  section .questions header h2 {
+    font-size: 40px;
+  }
+  section .questions main ul {
+    font-size: 24px;
+  }
+  section .questions footer button {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=questions.component.css.map */

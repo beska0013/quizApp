@@ -1,0 +1,33 @@
+
+
+<section *ngIf="quizActive else quizEnd">
+  <div class="questions" *ngIf=" loader else loaderEvent">
+  <header>
+    <h2>{{question}}</h2>
+  </header>
+
+  <main>
+   <ul *ngFor="let answer of answersArray">
+     <li class="answer" (click)="checkAnswer($event)">{{answer}}</li>
+   </ul>
+
+  </main>
+
+
+
+    <footer>
+        <p *ngIf="error">Choose Answer</p>
+  <button (click)="submit()">Next</button>
+    </footer>
+  </div>
+  <ng-template  #loaderEvent>
+    <app-loader></app-loader>
+  </ng-template>
+</section>
+
+<ng-template #quizEnd>
+
+<app-quiz-result [newScore]="score">
+
+</app-quiz-result>
+</ng-template>

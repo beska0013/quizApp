@@ -1,0 +1,21 @@
+
+
+@keyframes squareDrop{
+  50%{
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  75%{
+    transform: translate(0, 0) rotate(10deg);
+  }
+100%{
+  transform: translate(0, 0) rotate(0deg);
+}
+}
+
+@keyframes fadein{
+
+  to{
+    opacity: 1;
+  }
+
+}

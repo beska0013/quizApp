@@ -1,0 +1,33 @@
+@import '../../../../src/assets/styles/linkin.scss';
+
+
+section{
+  opacity:0;
+  flex-flow: column;
+  font-family: "Segoe UI",sans-serif;
+  padding: 1rem;
+  animation: fadein 1s ease-in-out forwards;
+h2,h3{
+  font-size: 32px;
+  text-align: center;
+  margin: 1em 0;
+}
+  h3 span{
+    position:relative;
+   color: #f3ff00;
+    cursor: pointer;
+    &::after{
+      position:absolute;
+      content:'';
+      @include  size(3px,0);
+       background-color: #f3ff00;
+       bottom:0;
+       left: 0;
+      transition:width .3s ease-in-out
+    }
+    &:hover::after{
+     width:100%;
+      transition:width .3s ease-in-out
+    }
+  }
+}

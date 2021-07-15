@@ -1,15 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../src/assets/styles/linkin.scss";
-
-
+@keyframes squareDrop {
+  50% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  75% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Righteouse";
+  src: url("../fonts/Righteous-Regular.ttf");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI.ttf");
+}
 /* You can add global styles to this file, and also import other style files */
-*{
-  padding:0;
+* {
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
   user-select: none;
-  color:#ffffff;
+  color: #ffffff;
 }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,31 +51,40 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
-  @include flex(center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   background: linear-gradient(145deg, #262744, #252c48, #24314b, #24354e, #253a50);
 }
+
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* Box sizing rules */
 *,
 *::before,
@@ -102,7 +133,6 @@ ol[class] {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-
 }
 
 /* Make images easier to work with */
@@ -121,31 +151,41 @@ input,
 button,
 textarea,
 select {
-  border:0;
-  outline:0;
+  border: 0;
+  outline: 0;
   font: inherit;
 }
-button, select { cursor:pointer; }
 
-
- app-root,app-components{
- @include square(100%);
- }
-
-section{
-  @include square(100%);
-  @include flex(center)
+button, select {
+  cursor: pointer;
 }
-button,select{
-  @include size(60px,100%);
+
+app-root, app-components {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button, select {
+  height: 60px;
+  width: 100%;
   background-color: #35496f;
   border-radius: 10px;
   color: #ffffff;
-  transition: transform .3s ease-in-out,opacity .3s ease-in-out;
-  border:1px solid transparent;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
 
+button:active {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.9);
 }
-button:active{
-  transition: transform .3s ease-in-out;
-  transform:scale(.9)
-}
+
+/*# sourceMappingURL=styles.css.map */
